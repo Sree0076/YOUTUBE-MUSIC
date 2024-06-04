@@ -1,0 +1,244 @@
+body{
+    background-color: rgb(46, 77, 102);
+}
+
+.mainpage{
+    background-color: rgb(2, 2, 2);
+}
+
+.div--black{
+    background-color: rgb(51,51,51);
+}
+
+.div--option{
+    padding-left: 5%;
+    height: 50px;
+}
+.div--option:hover{
+    background-color: rgb(61,61,61);
+    cursor: pointer;
+}
+
+.div--option--clicked{
+    background-color: rgb(61,61,61);
+    font-family:'Arial Narrow Bold', sans-serif;
+    cursor: pointer;
+}
+
+.description{
+    color: rgb(170,170,170);
+    font-size:14px;
+    cursor:default;
+}
+
+.a--settings{
+    text-decoration: none;
+    color: #fff;
+}
+
+.a--settings-channel{
+    text-decoration: none;
+    font-family: bold;
+    color: #fff;
+}
+
+
+#pop-up{
+    margin: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 10%;
+}
+
+#small--pop-up{
+    background-color: rgb(51, 51, 51);
+    margin-left: auto;
+    margin-right: auto;
+    top: 20%;
+    min-width: 300px;
+    max-width: 800px;
+    min-height: 200px;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+#small--pop-up .button{
+    background-color: rgb(51, 51, 51);
+    float: right;
+    border: none;
+    padding: 5px;
+    margin: 5px;
+}
+
+#small--pop-up .button:hover{
+    background-color: rgb(61, 61, 61);
+}
+
+#small--pop-up .text--blue{
+   color: rgb(100, 100, 238);
+}
+
+#small--pop-up .text--white{
+    color: white;
+ }
+
+.settings--select{
+    background-color:  rgb(51,51,51);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    color: #fff;
+    width: 50%;
+    cursor: pointer;
+}
+
+.settings--option{
+    background-color:  rgb(71,71,71);
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+/* toggle button */
+.toggle{
+    position:relative;
+    background : rgb(255, 255, 255, 0.0);
+    width: 30px;
+    cursor: pointer;
+}
+
+.toggle .button{
+    position: relative;
+    width: 0px;
+    height:0px;
+    top: 0px;
+    display: none;
+}
+
+
+.toggle .toggleBar{
+    position: absolute;
+    top:5px;
+    background-color: rgb(113, 113, 113);
+    width: 30px;
+    height: 10px;
+    border-radius: 10px;
+}
+
+.toggle .toggleButton{
+    position: relative;
+    z-index: 2;
+    top:0px;
+    background-color: rgb(144, 144, 144);
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+}
+
+.toggle .f--right{
+    float: right;
+    background-color: rgb(62, 166, 255);
+}
+
+.toggle .bar--bgcolor{
+     background-color: rgb(55, 85, 113);
+}
+/* toggle button end  */
+
+
+.border--right{
+    border-bottom: 0px !important;
+    border-top: 0px !important;
+    border-left: 0px !important;
+    border-right: solid white 1px !important;
+
+}
+
+.arrow--button{
+     height: 20px;
+     width: 20px;
+     background-color: #fff;
+     color: #fff;
+}
+
+.do--hover--arrow{
+    cursor:pointer;
+}
+
+.hover--p{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .border--right{
+      border: none !important;
+      
+    }
+
+    #right--side-column{
+        min-height: 300px;
+        max-height: 500px;
+        overflow-y: scroll;
+        scrollbar-width: none;
+    }
+
+    .div--option:hover{
+        background-color: rgb(61,61,61);
+        cursor: default;
+    }
+
+    #small--pop-up{
+        background-color: rgb(51, 51, 51);
+        margin-left: auto;
+        margin-right: auto;
+        top: 20%;
+        min-width: 200px;
+        max-width: 300px;
+        min-height: 300px;
+        padding: 20px;
+    }
+    
+
+  }
+
+
+  @media screen and (max-width: 968px) {
+
+    #small--pop-up{
+        background-color: rgb(51, 51, 51);
+        margin-left: auto;
+        margin-right: auto;
+        top: 20%;
+        min-width: 300px;
+        max-width: 500px;
+        min-height: 200px;
+        max-height: 400px;
+        padding: 30px;
+        overflow-y: scroll;
+        scrollbar-width: none;
+    }
+    
+
+  }
+
+
+
+  @media screen and (min-width: 768px) {
+    #navigation{
+        display: block !important;
+    }
+    #settings--form{
+        display: block !important;
+    }
+  }
+
+
+
+

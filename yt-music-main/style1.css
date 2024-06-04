@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+}
+
+.video-container {
+    position: relative;
+    width: 80%;
+    max-width: 1280px;
+    margin: auto;
+}
+
+video {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.control-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.progress-bar {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.time {
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+.volume-control {
+    width: 100px;
+}
+
+#customImage {
+    display: none;
+}
+
+/* Additional Styles */
+.video-container:hover .controls {
+    opacity: 1;
+}
+
+.control-button:hover,
+.progress-bar:hover,
+.volume-control:hover {
+    opacity: 0.7;
+}
+.related-content {
+    float: right;
+    width: 250px;
+    /* Adjust width as needed */
+    margin-right: 20px;
+    /* Adjust margin as needed */
+}
+
+.related-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.related-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.related-content ul li {
+    margin-bottom: 5px;
+}
+
+.related-content ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.related-content ul li a:hover {
+    color: #666;
+}

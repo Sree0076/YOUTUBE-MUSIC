@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Video Player</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://kit.fontawesome.com/3793324eed.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="video-container">
+        <video width="1280" height="720" id="videoPlayer">
+            <source id="videoSource" type="audio/mp3">
+            Your browser does not support the video tag.
+        </video>
+        <div class="controls" id="playcontrols">
+            <button id="playPauseButton" class="control-button">
+                <span id="playIcon">▶️</span>
+                <span id="pauseIcon" style="display: none;"><i class="play fas fa-play"></i></span>
+            </button>
+            <input type="range" id="progressBar" class="progress-bar" min="0" max="100" value="0">
+            <span id="currentTime" class="time">00:00</span>
+            <span id="duration" class="time">00:00</span>
+            <button id="muteButton" class="control-button">
+                <span id="muteIcon">🔇</span>
+                <span id="unmuteIcon" style="display: none;">🔊</span>
+            </button>
+            <input type="range" id="volumeControl" class="volume-control" min="0" max="1" step="0.1" value="1">
+            <button id="fullscreenButton" class="control-button">⛶</button>
+            <a id="downloadButton" class="control-button" download="video.mp4">⬇️</a>
+            <button id="pipButton" class="control-button">PIP</button>
+            <button id="customImageButton" class="control-button">show</button>
+        </div>
+    </div>
+        <div class="related-content">
+            <h2>Related Content</h2>
+            <ul>
+                <li><a href="#">Related Video 1</a></li>
+                <li><a href="#">Related Video 2</a></li>
+                <li><a href="#">Related Video 3</a></li>
+                <!-- Add more related content items as needed -->
+            </ul>
+        </div>
+    <!-- Add the image element -->
+    <script src="script1.js"></script>
+</body>
+
+</html>
+
+
+

@@ -1,0 +1,1486 @@
+body {
+  font-family: "YouTube Sans", sans-serif;
+  width: 100%;
+}
+
+.fs-10 {
+  font-size: 10px;
+}
+.w-85 {
+  width: 90%;
+}
+
+.toggleandlogo {
+  align-items: center;
+}
+
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+/* ==================================TOP RIGHT ICONS================================ */
+.toprighticons {
+  display: flex;
+  width: fit-content;
+  position: fixed;
+  top: 15px;
+  right: 10%;
+  z-index: 2000;
+}
+.searchicon {
+  display: none;
+  padding-right: 20px;
+  margin-top: 4px;
+  /* padding-top: 30px; */
+}
+
+.casticon {
+  margin-top: 5px;
+  /* margin-left: 400px; */
+}
+
+/* =======================================MODAL==================================== */
+#modaal {
+  display: none;
+  position: absolute;
+  right: 125px;
+  top: 55px;
+}
+
+#sidebar.expand ~ .main #modaal {
+  display: none;
+  position: absolute;
+  right: 365px;
+  top: 55px;
+}
+
+#modaalonshowall {
+  display: none;
+  position: absolute;
+  right: 200px;
+  top: 55px;
+}
+
+#sidebar.expand ~ .main #modaalonshowall .modal-body {
+  padding-bottom: 20px;
+  border-top: 1px solid rgba(128, 128, 128, 0.395);
+}
+
+.modalbox,
+.modal-dialog {
+  border-radius: 15px;
+  background-color: rgb(51, 51, 51);
+}
+
+.your-channel-button {
+  width: 100%;
+  border-radius: 0;
+}
+
+.your-channel-button:hover {
+  background-color: rgba(128, 128, 128, 0.543);
+}
+.proilepic {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 50%;
+  height: 50px;
+}
+/* ===========================================SIDEBAR======================================= */
+#sidebar {
+  background-color: transparent;
+  width: 70px;
+  min-width: 70px;
+  z-index: 1000;
+  transition: all;
+}
+
+#sidebar.expand .sidebarnav {
+  position: fixed;
+  background-color: black;
+  border-right: 1px solid rgba(128, 128, 128, 0.228);
+}
+.fs-15 {
+  font-size: 15px;
+}
+
+#sidebar.expand {
+  width: 240px;
+  min-width: 240px;
+}
+
+.toggle-btn {
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  padding: 1rem 1.5rem;
+}
+
+.toggle-btn i {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.sidebar-logo {
+  margin: auto 0;
+  width: fit-content;
+}
+
+.sidebar-logo a {
+  color: white;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+#sidebar:not(.expand) .sidebar-logo,
+#sidebar:not(.expand) a.sidebar-link span {
+  display: none;
+}
+#sidebar.expand .sidebar-text {
+  display: inline;
+  margin-left: 10px; /* Space between icon and text */
+}
+
+hr {
+  display: none;
+}
+
+#sidebar.expand hr {
+  display: block;
+}
+
+#sidebar.expand ~ .main {
+  position: relative;
+  width: 100%;
+  margin-left: 0;
+}
+
+.musiclogo {
+  height: 30px;
+}
+
+ul li {
+  color: white;
+  text-decoration: none;
+}
+
+.playlistbutton {
+  border-radius: 20px;
+  background-color: rgba(128, 128, 128, 0.185);
+}
+
+.playlistbutton:hover {
+  background-color: rgba(128, 128, 128, 0.39);
+}
+
+.likedmusic {
+  position: relative;
+}
+
+.likedmusic:hover {
+  background-color: rgba(128, 128, 128, 0.39);
+}
+
+.likedmusic:hover + .playicondiv {
+  display: block;
+}
+
+.playicondiv {
+  position: absolute;
+  top: 60%;
+  left: 180px;
+  display: none;
+}
+
+.playicon {
+  color: white;
+}
+
+.rightnav {
+  padding-top: 15px;
+  z-index: 5;
+  position: fixed;
+  width: 500px;
+  height: 65px;
+}
+
+.searchbar {
+  /* margin-top: 15px; */
+  margin-left: 100px;
+  /* margin-bottom: 15px; */
+  width: 500px;
+  background-color: rgb(128, 128, 128);
+  opacity: 40%;
+}
+
+.hiddenlogo {
+  display: none;
+}
+
+#listtogglelast {
+  position: absolute;
+  top: 0px;
+  font-weight: bold;
+}
+
+.ytlogoonnav {
+  position: absolute;
+  top: 20px;
+  left: 72px;
+}
+
+.sidebarnav {
+  position: fixed; /* Make the sidebar items fixed */
+  top: 0; /* Position at the top of the viewport */
+  bottom: 0; /* Expand the sidebar items to the bottom of the viewport */
+  width: 70px; /* Set the width of the sidebar when collapsed */
+}
+
+#sidebar.expand .sidebarnav {
+  width: 240px; /* Set the width of the sidebar when expanded */
+}
+
+#sidebar.expand + .main {
+  margin-left: 0px; /* Width of expanded sidebar */
+}
+.navbarbutton:hover {
+  background-color: rgba(128, 128, 128, 0.575);
+}
+#sidebar.expand .homeicon {
+  padding-left: 10px;
+  padding-right: 20px;
+}
+.home {
+  align-items: center;
+  font-size: 12px; /* Font size for collapsed state */
+  text-align: center;
+  /* padding: 10px 0; */
+}
+
+#sidebar.expand .home {
+  font-size: 16px; /* Font size for expanded state */
+}
+
+.playlists {
+  display: none;
+}
+
+#sidebar.expand .playlists {
+  display: block;
+}
+
+/* ================================MAIN SECTION=========================================== */
+.main {
+  position: absolute;
+  height: 500vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.35s ease-in-out;
+}
+.main img {
+  z-index: 999;
+}
+
+#sidebar.scrolled,
+.rightnav.scrolled {
+  background-color: black;
+  transition: background-color 0.1s ease;
+  border-right: 1px solid rgba(255, 255, 255, 0.196);
+}
+
+#sidebar.scrolled,
+.rightnav.scrolled {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.196);
+}
+
+.input-icon {
+  position: relative;
+  left: 80px;
+}
+
+#sidebar.expand ~ .main .input-icon {
+  margin-left: -70px;
+}
+
+.input-icon > i {
+  position: absolute;
+  left: 110px;
+  top: 40%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #aaa;
+}
+
+.input-icon > input {
+  padding-left: 35px;
+}
+
+.input-icon > input::placeholder {
+  padding-left: 20px;
+  color: #fff;
+}
+
+/* =======================================CONTENTS======================================== */
+
+.scrollcontents {
+  /* padding-top: 350px;  */
+  overflow: auto;
+  height: fit-content;
+
+  /* height: 100%; */
+  flex: 0 0 auto;
+  overflow: hidden;
+  padding-top: 350px;
+}
+
+.photocontainer img {
+  height: 400px;
+  object-fit: cover;
+}
+
+#artistimage {
+  width: 100%;
+  filter: brightness(60%);
+  /* height:100%; Keep the height fixed */
+  object-fit: cover; /* Ensure the image covers the area and crops from both sides */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* overflow:hidden; Enable scrolling if content overflows */
+}
+
+#artistimage img {
+  width: 100%;
+}
+
+.namesection {
+  top: 220px;
+  left: 0;
+  height: 730px;
+  background: linear-gradient(
+    180deg,
+    rgba(82, 82, 51, 0) 0%,
+    rgba(0, 0, 0, 1) 24%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+}
+
+.artistname {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#about {
+  overflow: hidden;
+  height: 90px;
+  transition: height 0.5s ease;
+}
+.readmore {
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.readmore a {
+  color: white;
+  font-weight: bold;
+  font-size: small;
+  cursor: pointer;
+}
+.shufflebtn {
+  border-radius: 20px;
+  width: 140px;
+}
+
+.subbutton {
+  border-color: rgb(243, 41, 41);
+  border-radius: 20px;
+  width: 140px;
+  color: rgb(243, 41, 41);
+}
+
+.subbutton:hover {
+  border-color: rgb(243, 41, 41);
+  border-radius: 20px;
+  width: 140px;
+  color: rgb(243, 41, 41);
+}
+
+.threedotbutton:hover {
+  background-color: #aaaaaa48;
+  border-radius: 25px;
+}
+
+#songsheading {
+  margin-top: 100px;
+  margin-left: 180px;
+}
+
+#sidebar.expand ~ .main #songsheading {
+  margin-left: 110px;
+}
+
+.fw-boldd {
+  font-weight: bolder;
+}
+
+.carouselsection {
+  position: relative; /* Ensure the section is positioned relative to the parent */
+  top: 600px;
+  left: 0; /* This value should match the height of namesection */
+  background-color: black;
+  padding-top: 0;
+  z-index: 1;
+  width: 100%; /* Adjust this value as per your layout */
+  /* margin: 0 auto;  */
+}
+
+/* ===========================================SONGLIST CAROUSEL=========================== */
+.trending-container {
+  margin-top: 10px;
+  margin-left: 8.5%;
+  margin-right: 10%;
+  /* max-height: 370px;  */
+  height: 270px;
+  /* overflow-y: auto; */
+  /* overflow-x: hidden;  */
+  white-space: nowrap;
+}
+
+.table-grid-container {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr); /* Example: 4 rows */
+  color: white;
+  white-space: nowrap;
+  width: 90%;
+  margin-left: 7%;
+  gap: 5px;
+  margin-bottom: 30px;
+}
+
+#sidebar.expand ~ .main .table-grid-container {
+  margin-left: 30px;
+}
+
+.song {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.429);
+  padding: 5px;
+  display: flex;
+}
+
+.song a {
+  color: white;
+}
+
+.song:hover a {
+  text-decoration: underline;
+}
+
+.song img {
+  width: 50px;
+  height: 30px;
+  margin-right: 1%;
+  margin-bottom: 10px;
+  z-index: 3;
+}
+.detailsTable {
+  font-weight: bold;
+  margin-left: 200px;
+  text-align: left;
+  /* align-items: center; */
+  line-height: 0.5px;
+  width: 500px;
+  /* margin-top: 2%;  */
+  white-space: wrap; /* Prevent text from wrapping */
+  font-size: 0.8em;
+}
+
+.duration {
+  font-size: 12px;
+  padding-top: 10px;
+}
+
+.custom-more-button {
+  margin-top: 15px;
+  margin-left: 180px;
+  border-radius: 25px;
+  color: white;
+  border-color: white;
+}
+
+#sidebar.expand ~ .main .custom-more-button {
+  margin-left: 110px;
+}
+
+.custom-more-button:hover {
+  border-color: white;
+  color: black;
+  background-color: white;
+}
+
+.content-container {
+  width: 170px;
+  overflow: hidden;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border: none;
+  border-radius: 5px;
+  display: block;
+}
+
+.image-container i {
+  position: absolute;
+  top: 80%;
+  left: 80%;
+  transform: translate(-50%, -50%) scale(1);
+  visibility: hidden;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+  filter: brightness(50%);
+  cursor: default;
+}
+
+.image-container:hover i {
+  visibility: visible;
+}
+.image-container i:hover {
+  cursor: pointer;
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+/* Style the details container */
+.details-container {
+  text-align: left;
+}
+
+.details-container a {
+  color: white;
+}
+
+.details-container:hover a {
+  text-decoration: underline;
+}
+
+.details-container .title {
+  padding-top: 10px;
+  word-wrap: break-word;
+  font-weight: bold;
+}
+
+.song-name,
+.artist-name {
+  display: block;
+  width: 100%;
+}
+
+.song-name {
+  font-weight: bold;
+
+  margin-top: 5px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.artist-name {
+  margin-top: 3px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.more-main {
+  /* position: absolute; */
+  height: 200vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.35s ease-in-out;
+}
+
+.container1 {
+  display: flex;
+  /* margin-top:70px; */
+  padding-left: 170px;
+  /* margin-right: 100px; */
+
+  /* justify-content: center;  */
+  /* align-items: center; */
+  /* min-height: 100vh; */
+}
+
+/* .main-queue-moregrid .row {
+      width: 100%;
+  } */
+
+.card {
+  background-color: #827b7b00;
+  color: white;
+  /* height: 180px;  */
+  margin-top: 30px;
+  /* margin-left: 85px; */
+  /* Fixed height for uniformity */
+  display: flex;
+  /* padding: 0%; */
+  flex-direction: column;
+  /* justify-content: space-between; */
+  height: 200px;
+  /* margin-top: 30px; */
+  /* margin-bottom: 20px; */
+  /* overflow: hidden; */
+  /* width: 100%; */
+  /* transition: box-shadow 0.3s ease;  */
+  transition: box-shadow 0.3s ease, filter 0.3s ease; /* Smooth transition for both shadows */
+}
+
+.card-img-top {
+  /* width: 150px; */
+  /* width: 100%; */
+  /* height: 150px;  */
+  /* Fixed height for image */
+  /* padding: 0; */
+
+  object-fit: cover;
+  margin-bottom: 5px;
+  /* margin-right: 100px; */
+  /* Ensure the image covers the area without distortion */
+}
+
+.card-body {
+  /* padding: 2rem; */
+  padding: 0%;
+  display: flex;
+  overflow-y: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+  /* justify-content: flex-start; */
+  /* Ensure text is spaced evenly */
+}
+
+.card-title {
+  margin: 0;
+  font-size: 14px;
+  /* Remove these properties to allow text wrapping */
+  white-space: normal;
+  overflow: visible;
+  /* text-overflow: clip; */
+}
+
+.card-text {
+  font-size: 12px;
+  color: #aaa;
+  /* Remove these properties to allow text wrapping */
+  white-space: normal;
+  overflow: visible;
+  text-overflow: ellipsis;
+}
+
+/* .moregrid-item {
+      text-align: center;
+      margin-bottom: 0px; 
+  } */
+
+.thumbnail-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 249, 249);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.thumbnail-container:hover .play-icon {
+  opacity: 1;
+}
+
+.play-icon:hover {
+  cursor: pointer;
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+.thumbnail-container:hover img {
+  filter: brightness(40%);
+}
+
+.card:hover {
+  /* filter: drop-shadow(5px 5px 5px rgb(88, 88, 88)); */
+  background-color: rgb(42, 42, 42);
+}
+
+.signinbutton {
+  border-radius: 20px;
+  font-size: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.466);
+  font-weight: bold;
+}
+
+.more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  cursor: pointer;
+  padding-right: 30px;
+}
+
+#sidebar.expand ~ .main .more {
+  margin-right: 50px;
+}
+
+.more p {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 15px;
+  border-radius: 30px;
+  margin-top: 15px;
+}
+
+.more p:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.more i {
+  margin-left: 15px;
+}
+
+.more a {
+  text-decoration: none;
+}
+
+/* ===============================================ALBUMS CAROUSEL============================== */
+
+.outofalbums {
+  height: 300px;
+}
+.albums {
+  margin-top: 80px;
+  padding-left: 180px;
+}
+#sidebar.expand ~ .main .albums {
+  padding-left: 110px;
+}
+
+.album-slider-container {
+  overflow-x: hidden;
+  white-space: nowrap;
+  margin-left: 180px;
+  margin-right: 100px;
+}
+
+#sidebar.expand ~ .main .album-slider-container {
+  margin-left: 110px;
+}
+
+.album-slider-container:hover {
+  overflow-x: auto;
+}
+
+.album-slider-container::-webkit-scrollbar {
+  height: 10px;
+}
+
+.album-slider-container::-webkit-scrollbar {
+  background-color: black;
+}
+
+.album-slider-container::-webkit-scrollbar-thumb {
+  background-color: rgb(136, 136, 136);
+}
+
+.newalbums-singles-slider {
+  /* margin-top: 40px; */
+  list-style: none;
+  padding: 0px;
+}
+
+.newalbums-singles-slider li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* ======================SINGLES CAROUSEL============================= */
+
+.singles {
+  padding-left: 110px;
+}
+#sidebar.expand ~ .main .singles {
+  padding-left: 100px;
+}
+
+.singlescontainer {
+  margin-top: 30px;
+  height: 250px;
+}
+
+.single-slider-container {
+  overflow-x: hidden;
+  white-space: nowrap;
+  margin-left: 180px;
+  margin-right: 100px;
+}
+
+#sidebar.expand ~ .main .single-slider-container {
+  margin-left: 110px;
+}
+
+.single-slider-container:hover {
+  overflow-x: auto;
+}
+
+.single-slider-container::-webkit-scrollbar {
+  height: 10px;
+
+  background-color: black;
+}
+
+.single-slider-container::-webkit-scrollbar-thumb {
+  background-color: rgb(136, 136, 136);
+}
+
+/* Slider list */
+.singles-slider {
+  list-style: none;
+  padding: 0;
+}
+
+.singles-slider li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* Scrollbar styles */
+
+/* Content container */
+.single-content-container {
+  width: 170px;
+  overflow: hidden;
+}
+
+/* Image container */
+.single-image-container {
+  position: relative;
+  width: 100%;
+}
+
+.single-image-container img {
+  width: 100%;
+  height: auto;
+  border: none;
+  border-radius: 5px;
+  display: block;
+}
+
+.single-image-container i {
+  position: absolute;
+  top: 80%;
+  left: 80%;
+  transform: translate(-50%, -50%) scale(1);
+  visibility: hidden;
+  transition: transform 0.3s ease;
+}
+
+.single-image-container:hover img {
+  filter: brightness(50%);
+  cursor: pointer;
+}
+
+.single-image-container:hover i {
+  visibility: visible;
+}
+
+.single-image-container i:hover {
+  cursor: pointer;
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+/* Details container */
+.single-details-container {
+  text-align: left;
+}
+
+.single-details-container .single-title {
+  padding-top: 10px;
+  word-wrap: break-word;
+  font-weight: bold;
+}
+
+/* Song and artist details */
+.single-song-name,
+.single-artist-name {
+  display: block;
+  width: 100%;
+}
+
+.single-song-name {
+  font-weight: bold;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.single-artist-name {
+  margin-top: 3px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.single-details-container a {
+  color: white;
+}
+
+.single-details-container:hover a {
+  text-decoration: underline;
+}
+
+/* ------------------------VIDEOS CAROUSEL--------------------------------- */
+
+.videos {
+  margin-left: 110px;
+}
+
+#sidebar.expand ~ .main .videos {
+  margin-left: 100px;
+}
+
+/* Slider list */
+
+.videoscontainer {
+  margin-top: 30px;
+  height: 250px;
+}
+
+.video-slider-container {
+  overflow-x: hidden;
+  white-space: nowrap;
+  margin-left: 180px;
+  margin-right: 100px;
+}
+
+#sidebar.expand ~ .main .video-slider-container {
+  margin-left: 110px;
+}
+
+.video-slider-container:hover {
+  overflow-x: auto;
+}
+
+.video-slider-container::-webkit-scrollbar {
+  height: 10px;
+  background-color: black;
+}
+
+.video-slider-container::-webkit-scrollbar-thumb {
+  background-color: rgb(136, 136, 136);
+}
+
+.videos-slider {
+  list-style: none;
+  padding: 0;
+}
+
+.videos-slider li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.video-content-container {
+  width: 300px;
+  overflow: hidden;
+}
+
+.video-image-container {
+  position: relative;
+  width: 100%;
+}
+
+.video-image-container img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border: none;
+  display: block;
+}
+
+.video-image-container i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(2);
+  /* visibility: hidden; */
+  transition: transform 0.3s ease;
+}
+
+.video-image-container:hover img {
+  filter: brightness(50%);
+  cursor: pointer;
+}
+
+.video-image-container i:hover {
+  cursor: pointer;
+  /* transform: translate(-50%, -50%) scale(1.5); */
+}
+
+.video-details-container {
+  text-align: left;
+}
+
+.video-details-container .video-title {
+  padding-top: 10px;
+  word-wrap: break-word;
+  font-weight: bold;
+}
+
+.video-title a {
+  color: white;
+}
+
+.video-title a:hover {
+  text-decoration: underline;
+}
+
+.video-song-name,
+.video-artist-name {
+  display: block;
+  width: 100%;
+}
+
+.video-song-name {
+  font-weight: bold;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.video-artist-name {
+  margin-top: 3px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* -----------------------------------FEATUED CAROUSLE----------------------- */
+
+.featuredcontainer {
+  margin-top: 30px;
+  height: 250px;
+  margin-left: 0px;
+  padding-left: 60px;
+}
+
+.featured {
+  padding-left: 110px;
+}
+
+#sidebar.expand ~ .main .featured {
+  padding-left: 100px;
+}
+
+.featured-slider-container {
+  overflow-x: hidden;
+  white-space: nowrap;
+  margin-left: 120px;
+  margin-right: 100px;
+}
+
+#sidebar.expand ~ .main .featured-slider-container {
+  margin-left: 50px;
+}
+
+.featured-slider-container:hover {
+  overflow-x: auto;
+}
+
+/* Slider list */
+.featured-slider {
+  list-style: none;
+  padding: 0;
+}
+
+.featured-slider li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* Scrollbar styles */
+.featured-slider-container::-webkit-scrollbar {
+  height: 10px;
+
+  background-color: black;
+}
+
+.featured-slider-container::-webkit-scrollbar-thumb {
+  background-color: rgb(136, 136, 136);
+}
+
+/* Content container */
+.featured-content-container {
+  width: 170px;
+  overflow: hidden;
+}
+
+/* Image container */
+.featured-image-container {
+  position: relative;
+  width: 100%;
+}
+
+.featured-image-container img {
+  width: 100%;
+  height: auto;
+  border: none;
+  border-radius: 5px;
+  display: block;
+}
+
+.featured-image-container i {
+  position: absolute;
+  top: 80%;
+  left: 80%;
+  transform: translate(-50%, -50%) scale(1);
+  visibility: hidden;
+  transition: transform 0.3s ease;
+}
+
+.featured-image-container:hover img {
+  filter: brightness(50%);
+  cursor: pointer;
+}
+
+.featured-image-container:hover i {
+  visibility: visible;
+}
+
+.featured-image-container i:hover {
+  cursor: pointer;
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+/* Details container */
+.featured-details-container {
+  text-align: left;
+}
+
+.featured-details-container .featured-title {
+  padding-top: 10px;
+  word-wrap: break-word;
+  font-weight: bold;
+}
+
+/* Song and artist details */
+.featured-song-name,
+.featured-artist-name {
+  display: block;
+  width: 100%;
+}
+
+.featured-song-name {
+  font-weight: bold;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.featured-artist-name {
+  margin-top: 3px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* --------------------FANS CAROUSEL-------------------------------------- */
+
+.fancontainer {
+  margin-top: 30px;
+  height: 250px;
+}
+
+.fans {
+  padding-left: 90px;
+}
+
+#sidebar.expand ~ .main .fans {
+  padding-left: 80px;
+}
+
+.fan-slider-container {
+  overflow-x: hidden;
+  white-space: nowrap;
+  margin-left: 180px;
+  margin-right: 100px;
+}
+
+#sidebar.expand ~ .main .fan-slider-container {
+  margin-left: 110px;
+}
+
+.fan-slider-container:hover {
+  overflow-x: auto;
+}
+
+/* Slider list */
+.fan-slider {
+  list-style: none;
+  padding: 0;
+}
+
+.fan-slider li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* Scrollbar styles */
+.fan-slider-container::-webkit-scrollbar {
+  height: 10px;
+  background-color: black;
+}
+
+.fan-slider-container::-webkit-scrollbar-thumb {
+  background-color: rgb(136, 136, 136);
+}
+
+/* Content container */
+.fan-content-container {
+  width: 150px;
+  overflow: hidden;
+}
+
+/* Circular image container */
+.fan-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.fan-image-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: block;
+}
+
+/* Details container */
+.fan-details-container {
+  text-align: center;
+}
+
+.fan-details-container .fan-title {
+  padding-top: 20px;
+  word-wrap: break-word;
+  font-weight: bold;
+}
+.fan-details-container .fan-title:hover{
+  cursor: pointer;
+}
+.fan-details-container a,
+.featured-details-container a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.fan-details-container:hover a,
+.featured-details-container:hover a {
+  text-decoration: underline;
+  color: #fff;
+}
+
+/* Song and artist details */
+.fan-song-name,
+.fan-artist-name {
+  display: block;
+  width: 100%;
+}
+
+.fan-song-name {
+  font-weight: bold;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.fan-artist-name {
+  margin-top: 3px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* ////////////////////////////////////////////////////////MEDIA QUERY///////////////////////// */
+
+@media only screen and (max-width: 1130px) {
+  /* THE WHOLE MARGIN REDUCES */
+  .searchbar {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 939px) {
+  /* IF SIDE BAR IS OPEN YOU HAVE TO COLLAPSE IT IT AND THE BLUR DIV SHOULD GO UP */
+  /* SIDEBAR OVERLAPS THE MAIN CONTENT */
+  /* ALSO THE BUTTONS SHOULD GO LIKE NORMAL */
+  /* SEARCH BAR ALSO DISAPPEARS ONLY ICON APPEARS */
+  /* MUSIC LIST CHANGES TO ONLY NAMES AND THUMBNAILS */
+  #hiddensearchicon {
+    display: block;
+  }
+  .input-icon {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 602px) {
+  /* SIDEBAR COMPLETELY DISAPPEARS */
+  /* LOGO AND TOGGLE BUTTON STILL BE THERE ON THE NAV BAR */
+
+  .main {
+    height: 330vh;
+  }
+  .expand {
+    display: none;
+  }
+
+  .hiddenlogo {
+    display: block;
+  }
+
+  #stagename {
+    margin-left: -40px;
+  }
+
+  .trending-container {
+    overflow-x: hidden;
+    margin-left: 0;
+  }
+
+  .custom-more-button {
+    position: absolute;
+    left: -80px;
+  }
+
+  .buttonsection {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .threedotbutton {
+    display: none;
+  }
+
+  .shufflebtn {
+    display: none;
+  }
+
+  .subbutton {
+    width: 300px;
+    margin-left: -40px;
+  }
+
+  #songsheading {
+    position: relative;
+    left: -75px;
+  }
+
+  .albums {
+    position: relative;
+    left: -60px;
+  }
+
+  .album-slider-container {
+    position: relative;
+    width: 80%;
+    left: -60px;
+  }
+
+  .singles {
+    position: relative;
+    left: -60px;
+  }
+  .single-slider-container {
+    position: relative;
+    width: 80%;
+    left: -60px;
+  }
+
+  .videos {
+    position: relative;
+    left: -60px;
+  }
+  .video-slider-container {
+    position: relative;
+    width: 95%;
+    left: -60px;
+  }
+
+  .featured {
+    position: relative;
+    left: -60px;
+  }
+  .featured-slider-container {
+    position: relative;
+    width: 95%;
+    left: -60px;
+  }
+
+  .fans {
+    position: relative;
+    left: -60px;
+  }
+  .fan-slider-container {
+    position: relative;
+    width: 80%;
+    left: -60px;
+  }
+
+  .artistname {
+    margin-left: 60px;
+    margin-right: 40px;
+  }
+  #about {
+    display: none;
+  }
+
+  .detailsTable {
+    margin-left: 60px;
+  }
+  .duration {
+    display: none;
+  }
+}

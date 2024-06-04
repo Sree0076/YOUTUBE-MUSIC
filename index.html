@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Music</title>
+</head>
+
+<body>
+    <button id="playButton">Play Music</button>
+
+    <script>
+        async function playMusic() {
+            const url = 'https://youtube-music-api3.p.rapidapi.com/matching?id=LnbvtRIw-Es';
+            const options = {
+                method: 'GET',
+                headers: {
+                    'X-RapidAPI-Key': '7a6694efccmshbf3595fdaf4c2fep1ac0e1jsn8225601fbcde',
+                    'X-RapidAPI-Host': 'youtube-music-api3.p.rapidapi.com'
+                }
+            };
+
+            try {
+                const response = await fetch(url, options);
+                const data = await response.json();
+
+                const musicUrl = data.musicUrl;
+                const audio = new Audio(musicUrl);
+                audio.play();
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        document.getElementById('playButton').addEventListener('click', playMusic);
+    </script>
+</body>
+
+</html>

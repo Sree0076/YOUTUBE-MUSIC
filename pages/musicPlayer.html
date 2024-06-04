@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YTM Music Player</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   
+    <link rel="stylesheet" href="../styles/musicPlayer.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- navbars code below -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/9db5628076.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.png">
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=YouTube+Sans&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+</head>
+<body>
+
+
+    
+    <div class="container-fluid align-items-start d-flex flex-wrap flex-row justify-content-start p-0" id="musicPlayer">
+        <input type="range" min="0" value="0" max="100" id="songProgress">
+        <div class="container-fluid align-items-center justify-content-between d-flex flex-row flex-wrap" id="contentDiv">
+            
+            <div class="d-flex m-2 flex-wrap justify-content-between" id="playPause">
+            
+                <button class="btn btn-dark playPauseButton" id="previousSongBtn"><i class="fas fa-step-backward"></i></button>
+            
+                <button class="btn btn-dark playPauseButton" id="playPauseBtn"><i class="fas fa-play"></i></button>
+
+                <button class="btn btn-dark playPauseButton me-3" id="nextSongBtn"><i class="fas fa-step-forward"></i></button>
+                <button id="fullscreenButton" class="control-button">⛶</button>
+                <button id="pipButton"></button>
+                <p id="selectedSongTime" class="mt-3"></p>
+
+            
+            </div>
+        
+            <div class="d-flex flex-row flex-wrap align-items-center justify-content-center m-0 p-0" id="songDetailsDiv">
+                <img id="playerSongImage" class="me-3" alt="playerSongImage">
+                <div id="songTextDetails" class="d-flex flex-column flex-wrap p-0 m-0 me-2">
+                    <label id="songName"></label>
+                    <label id="songOtherDetails"></label>
+                </div>
+                <button class="btn btn-dark playPauseButton"><i class="far fa-thumbs-down fa-flip-horizontal"></i></button>
+                <button class="btn btn-dark playPauseButton"><i class="far fa-thumbs-up"></i></button>
+                <button class="btn btn-dark playPauseButton"><i class="fas fa-ellipsis-v"></i></button>
+            </div>
+            <div class="d-flex flex-row flex-wrap align-items-center justify-content-center m-0 p-0" id="playerEndBtns">
+                <button id="muteButton" class="control-button">
+                               <span id="muteIcon"><i class="fa-solid fa-volume-xmark"></i></span>
+                               <span id="unmuteIcon" style="display: none;"><i class="fa-solid fa-volume-high"></i></span>
+                           </button>
+                <input type="range" id="volumeControl" class="volume-control" min="0" max="1" step="0.1" value="1">
+                <button class="btn btn-dark playPauseButton" id="loop-button"><i class="fas fa-redo"></i></button>
+                <button class="btn btn-dark playPauseButton"><i class="fas fa-random"></i></button>
+                <button class="btn btn-dark playPauseButton" id="popUpBtn"><i class="fas fa-caret-up"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex mainbody">
+        <div id="sidebar" class="expand">
+            <div class="sidebarnav">
+                <div class="d-flex toggleandlogo">
+                    <button class="toggle-btn listbutton" type="button">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <span>
+                        <img class="logowithmusic" src="../assets/on_platform_logo_dark.svg" alt="" />
+                    </span>
+                </div>
+                <div class="text-center ">
+                    <div class="btn container w-85 mt-3 d-flex navbarbutton">
+                        <div class="">
+                            <i class="bi bi-house-door text-white fs-5 homeicon"></i>
+                            <span class="text-white home"><a id="home">Home</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="btn container w-85 d-flex navbarbutton">
+                        <a href="../pages/explore.html" style="text-decoration: none;">
+                            <div class="">
+                                <i class="bi bi-browser-safari text-white fs-5 homeicon"></i>
+                                <span class="text-white home">Explore</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <div class="btn container w-85 d-flex navbarbutton">
+                        <a href="../pages/library.html" style="text-decoration: none;">
+                            <div class="">
+                                <i class="bi bi-music-note-list text-white fs-5 homeicon"></i>
+                                <span class="text-white home">Library</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="btn container w-85 d-flex navbarbutton">
+                        <div class="">
+                            <i class="bi bi-play-circle text-white fs-5 homeicon"></i>
+                            <span class="text-white home">Upgrade</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlists">
+                    <hr class="text-white mx-3">
+                </div>
+            </div>
+        </div>
+        <div class="main rightsection">
+            <div class="rightnav w-100 ">
+                <div class="input-icon">
+                    <i class="bi bi-search"></i>
+                    <input type="text" class="form-control searchbar" id="search-bar"
+                        placeholder="Search songs, albums, artists, podcasts" />
+                </div>
+            </div>
+            </div>
+                <div id="popUpDiv" class="d-flex flex-wrap flex-column">
+                    <div class="song-video-Div">
+                        <ul class="nav nav-pills rounded">
+                            <li class="nav-item">
+                                <button class="nav-link active" data-bs-toggle="pill" href="#songTab">Song</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" data-bs-toggle="pill" id="video-tab" href="#videoTab">Video</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="songTab" class="tab-pane fade show p-0 active">
+                                <img id="popUpImage" alt="popUpImage">
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <div id="videoTab" class="tab-pane fade show p-0">
+                                <video id="videoController" width="560" height="315" controls>
+                                    <source id="videoPlayer" src="" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="upNext-lyrics-related-Div">
+                        <ul class="nav nav-pills nav-underline">
+                            <li class="nav-item">
+                                <button class="nav-link active px-4" data-bs-toggle="pill" href="#upNextDiv">UP NEXT</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link px-4" data-bs-toggle="pill" href="#lyricsDiv">LYRICS</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link px-4" data-bs-toggle="pill" href="#relatedDiv">RELATED</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="upNextDiv" class="tab-pane fade show active p-0">
+                                <div id="listDiv">
+                                    <ul id="songList" class="songList">
+                
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="lyricsDiv" class="tab-pane fade p-0">
+                                <div id="listDiv">
+                                    lyrics
+                                </div>
+                            </div>
+                            <div id="relatedDiv" class="tab-pane fade p-0">
+                                <div id="listDiv">
+                                    <ul class="songList" id="related">
+                
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+</div>
+    <script src="../js/musicplayer.js"></script>
+</body>
+</html>
+
+
+
+

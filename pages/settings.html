@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/settings.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- <script src="../js/settings.js"></script> -->
+    <title>Settings</title>
+</head>
+<body>
+    <section>
+        <div class="mainpage">
+            <pre>
+                main page
+                <button class="float-end" onclick="openPopUp()"><img src="https://img.icons8.com/?size=512&id=3473&format=png" alt="settings" height="10px" width="10px"></button>
+
+
+                ....
+
+
+
+
+                ......
+
+
+
+
+                ........
+
+                bpuigoh
+
+                nbjiojo 
+
+
+                hfgo8tyf
+
+
+                bihghi
+
+                .............
+
+
+                ............
+            </pre>
+        </div>
+    </section>
+
+
+        
+        <div id="pop-up" class="z-3  bg-light fixed-top">
+            <div class="row div--black text-white m-0 rounded-top border border-top-0 border-start-0 border-end-0 border-bottom-5">
+                <div class="col-10 p-3">
+                    <span id="back--to--navigation" class="do--hover--arrow d-md-none float-start ps-1 pe-1" onclick="showNavigation()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/></svg></span>
+                    <h5 id="settings-name" class="d-none d-md-block">Settings</h5>
+                    <h5 id="nav-head-name" class="d-block d-md-none">Settings</h5>
+                </div>
+                <div class="col-2 p-3" data-bs-theme="dark">
+                    <button type="button" class="btn-close float-end" aria-label="Close" onclick="closePopUp()"></button>
+                </div>
+            </div>
+            <div id="right--side-column" class="row div--black text-white rounded-bottom m-0">
+                <div id="navigation" class="col-12 col-md-3 p-0 border--right">  <!-- col-12 col-md-3 p-0 border border-start-0 border-bottom-0 border-top-0 border-end-5 border-med --> 
+                    <nav>
+                        <div class="div--option" id="general"  onclick="general()">
+                            <span>General</span>
+                            <span class="do--hover--arrow d-block d-md-none float-end pe-4" onclick="showSettingsForm('General')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/></svg></span>
+                        </div>
+                        <div class="div--option" id="playback" onclick="playback()">
+                            <span>Playback</span>
+                            <span class="do--hover--arrow d-block d-md-none float-end pe-4" onclick="showSettingsForm('Playback')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/></svg></span>
+                        </div>
+                        <div class="div--option" id="download" onclick="download()">
+                            <span>Downloads</span>            <!-- <button onclick="alert('clicked')">click</button> -->
+                            <span class="do--hover--arrow d-block d-md-none float-end pe-4" onclick="showSettingsForm('Downloads')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/></svg></span>
+                        </div>
+                        <div class="div--option" id="privacy" onclick="privacy()">
+                            <span>Privacy</span>
+                            <span class="do--hover--arrow d-block d-md-none float-end pe-4" onclick="showSettingsForm('Privacy')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/></svg></span>
+                        </div>
+                        <div class="div--option" id="channel" onclick="channel()">
+                            <span>Channel settings</span>
+                            <span class="do--hover--arrow d-block d-md-none float-end pe-4" onclick="showSettingsForm('Channel settings')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/></svg></span>
+                        </div>
+                        <div class="div--option" id="recommendation" onclick="recommendation()">
+                            <span>Recommendation</span>
+                            <span class="do--hover--arrow d-block d-md-none float-end pe-4" onclick="showSettingsForm('Recommendation')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/></svg></span>
+                        </div>
+                        <div class="div--option" id="languageAndLocation" onclick="languageAndLocation()">
+                            <span>Language and location</span>
+                            <span class="do--hover--arrow d-block d-md-none float-end pe-4" onclick="showSettingsForm('Language and location')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/></svg></span>
+                        </div>
+                        <div class="div--option" id="about" onclick="about()">
+                            <span>About</span>
+                            <span class="do--hover--arrow d-block d-md-none float-end pe-4" onclick="showSettingsForm('About')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/></svg></span>
+                        </div>
+                        <div></br></br></br></br></div>
+                    </nav>
+                </div>
+                <div id="settings--form" class="col">
+                    <div id="settings-display">
+                        
+                        <!-- settings-general -->
+                        <div id="settings-general" class="p-5">
+                            <div id="restricted-mode">
+                                <div class="row">
+                                    <div class="col">
+                                        <span>Restricted Mode</span>
+                                    </div>
+                                    <div class="col">
+                                        <div class="float-end pe-5">
+                                            <div id="toggle--restricted-mode" class="toggle" onclick="setToggleValue('restrictedMode',this)">
+                                                <div class="toggleBar"></div>
+                                                <div class="toggleButton"></div>
+                                                <input type="button" class="button" value="0"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="description">Restricted Mode can help to hide videos and songs with potentially mature content. No filter is 100% accurate, but it should help you to avoid most of this type of content.</p>
+                                <hr>
+                            </div>
+
+                            <div id="liked-music">
+                                <div class="row">
+                                    <div class="col">
+                                        <span>Show videos from YouTube</span>
+                                    </div>
+                                    <div class="col">
+                                        <div class="float-end pe-5">
+                                            <div id="toggle--liked-music" class="toggle" onclick="setToggleValue('showVideos',this)">
+                                                <div class="toggleBar"></div>
+                                                <div class="toggleButton"></div>
+                                                <input type="button" class="button" value="0"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="description">Show videos from youtube</p>
+                                <hr>
+                            </div>
+
+                            <div id="most-used-playlist">
+                                <div class="row">
+                                    <div class="col">
+                                        <span>Remember most recently used playlist</span>
+                                    </div>
+                                    <div class="col">
+                                        <div class="float-end pe-5">
+                                            <div id="toggle--most-used-playlist" class="toggle" onclick="setToggleValue('RememberMost',this)">
+                                                <div class="toggleBar"></div>
+                                                <div class="toggleButton"></div>
+                                                <input type="button" class="button" value="0"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="description">Automatically save content to the most recently used playlist</p>
+                                <hr>
+                            </div>
+                        </div>
+
+                        <!-- settings playback  -->
+                        <div id="settings-playback" class="p-5">
+
+                            <div id="audio-quality">
+                                <div class="row">
+                                    <div class="col">
+                                        <span>Audio quality</span>
+                                    </div>
+                                    <div class="col">
+                                        <select id="select-audio-quality" class="settings--select float-end" onchange="changeAudioQuality()">
+                                            <option id="s0" class="settings--option" value="normal">Normal</option>
+                                            <option id="s1" class="settings--option" value="high">High</option>
+                                            <option id="s2" class="settings--option" value="low">Low</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+
+                            <div id="dynamic-queue">
+                                <div class="row">
+                                    <div class="col">
+                                        <span>Dynamic queue</span>
+                                    </div>
+                                    <div class="col">
+                                        <div class="float-end pe-5">
+                                            <div id="toggle--dynamic-queue" class="toggle" onclick="setToggleValue('dynamicQueue',this)">
+                                                <div class="toggleBar"></div>
+                                                <div class="toggleButton"></div>
+                                                <input type="button" class="button" value="0"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="description">Get queue and radio updates based on your listening behaviour.</p>
+                                <hr>
+                            </div>
+
+                        </div>
+
+                        <!-- settings downloads -->
+                        <div id="settings-downloads" class="p-5">
+
+                            <div id="clear-downloads">
+                                <div class="row">
+                                    <div class="col hover--p" onclick="showSmallPopUp('clear_downloads')">
+                                        <span>Clear downloads</span>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+
+                        </div>
+
+                        <!-- settings privacy -->
+                        <div id="settings-privacy" class="p-5">
+                            
+                            <div id="manage-watch-history">
+                                <div class="row">
+                                    <div class="col">
+                                        <a class="a--settings" href="https://myactivity.google.com/product/youtube?hl=en-GB&utm_source=youtube" target="_blank"><span>Manage watch history</span></a>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+
+                            <div id="clear-watch-history">
+                                <div class="row">
+                                    <div class="col hover--p" onclick="showSmallPopUp('clear_watch_history')">
+                                        <span>Clear watch history</span>
+                                    </div>
+                                </div>
+                                <p class="description">Clear this account's watch history from all devices. This will also clear your Stories watch history.</p>
+                                <hr>
+                            </div>
+
+                            <div id="pause-watch-history">
+                                <div class="row">
+                                    <div class="col">
+                                        <span>Pause watch history</span>
+                                    </div>
+                                    <div class="col">
+                                        <div class="float-end pe-5">
+                                            <div id="toggle--pause-watch-history" class="toggle" onclick="setToggleValue('pauseWatchHistory',this)">
+                                                <div class="toggleBar"></div>
+                                                <div class="toggleButton"></div>
+                                                <input type="button" class="button" value="0"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+
+                            <div id="clear-search-history">
+                                <div class="row">
+                                    <div class="col hover--p" onclick="showSmallPopUp('clear_search_history')">
+                                        <span>Clear search history</span>
+                                    </div>
+                                </div>
+                                <p class="description">Clear searches made with this account from all devices</p>
+                                <hr>
+                            </div>
+
+                            <div id="pause-search-history">
+                                <div class="row">
+                                    <div class="col">
+                                        <span>Pause search history</span>
+                                    </div>
+                                    <div class="col">
+                                        <div class="float-end pe-5">
+                                            <div id="toggle--pause-search-history" class="toggle" onclick="setToggleValue('pauseSearchHistory',this)">
+                                                <div class="toggleBar"></div>
+                                                <div class="toggleButton"></div>
+                                                <input type="button" class="button" value="0"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+
+                        </div>
+
+                        <!-- settings channel -->
+                        <div id="settings-channel" class="p-5">
+                            
+                            <div id="photo-and-details">
+                                <div class="row">
+                                    <div class="col">
+                                        <span>Photo and details</span>
+                                    </div>
+                                </div>
+                                <p class="description">Update on YouTube channel settings</p>
+                                <hr>
+                            </div>
+
+                            <div id="enable-public-stats">
+                                <div class="row">
+                                    <div class="col">
+                                        <span>Enable public stats</span>
+                                    </div>
+                                    <div class="col">
+                                        <div class="float-end pe-5">
+                                            <div id="toggle--enable-public-stats" class="toggle" onclick="setToggleValue('enablePublicStatus',this)">
+                                                <div class="toggleBar"></div>
+                                                <div class="toggleButton"></div>
+                                                <input type="button" class="button" value="0"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="description">Share your top songs, videos, artists and playlists on your channel. Use our mobile app to access advanced privacy settings that allow you to choose which public stats shelves appear on your channel. When additional stats become available, you can enable them in advanced privacy settings.<a class="a--settings-channel" href="https://support.google.com/youtubemusic/answer/13407991?visit_id=638521191278014112-3908977927&rd=1" target="_blank">Learn more</a></p>
+                                <hr>
+                            </div>
+
+                            <div id="public-playlists-and-videos">
+                                <div class="row">
+                                    <div class="col">
+                                        <span>Public playlists and videos</span>
+                                    </div>
+                                </div>
+                                <p class="description">These always appear on your profile.To hide them, make them private</p>
+                                <hr>
+                            </div>
+
+                        </div>
+
+                        <!-- settings recommendation -->
+                        <div id="settings-recommendation" class="p-5">
+                            
+                            <div id="improve-recommendation">
+                                <div class="row">
+                                    <div class="col">
+                                        <a class="a--settings" href="https://music.youtube.com/browse/FEmusic_language_selection" target="_blank"> <span>Improve your recommendation</span></a>
+                                    </div>
+                                </div>
+                                <p class="description">Pick your music languages and some artists that you like</p>
+                                <hr>
+                            </div>
+
+                        </div>
+
+                        <!-- settings language and location -->
+                        <div id="settings-language-and-location" class="p-5">
+
+                            <div id="location">
+                                <div class="row">
+                                    <div class="col">
+                                        <span>Location</span>
+                                    </div>
+                                    <div class="col">
+                                        <select id="select-location" class="settings--select float-end" onchange="changeLocation()">
+                                            <option id="s0" class="settings--option" value="india">India</option>
+                                            <option id="s1" class="settings--option" value="usa">USA</option>
+                                            <option id="s2" class="settings--option" value="uae">UAE</option>
+                                            <option id="s3" class="settings--option" value="uk">UK</option>
+                                            <option id="s4" class="settings--option" value="russia">Russia</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+
+                            <div id="language">
+                                <div class="row">
+                                    <div class="col">
+                                        <span>Language</span>
+                                    </div>
+                                    <div class="col">
+                                        <select id="select-language" class="settings--select float-end" onchange="changeLanguage()">
+                                            <option id="s0" class="settings--option" value="english">English</option>
+                                            <option id="s1" class="settings--option" value="hindi">Hindi</option>
+                                            <option id="s2" class="settings--option" value="malayalam">Malayalam</option>
+                                            <option id="s3" class="settings--option" value="arabic">Arabic</option>
+                                            <option id="s4" class="settings--option" value="russian">Russian</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+
+                        </div>
+
+                        <!-- settings about -->
+                        <div id="settings-about" class="p-5">
+                            
+                            <div id="youtube-terms-of-service">
+                                <div class="row">
+                                    <div class="col">
+                                        <a class="a--settings" href="https://www.youtube.com/t/terms?chromeless=1" target="_blank"><span>Youtube Terms of Service</span></a>
+                                    </div>
+                                </div>
+                                <p class="description">Read YouTube's Tearms of Service</p>
+                                <hr>
+                            </div>
+
+                            <div id="google-privacy-policy">  <!--onclick="window.open('https://example.com', '_blank');" -->
+                                <div class="row">
+                                    <div class="col">
+                                        <a class="a--settings" href="https://policies.google.com/privacy" target="_blank"><span>Google Privacy Policy</span></a>
+                                    </div>
+                                </div>
+                                <p class="description">Read Privacy Policy</p>
+                                <hr>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="small--pop-up" class="z-3 fixed-top">
+            
+        </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../js/settings.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+body {
+    background-color: #121212;
+    font-family: 'YouTube Sans', sans-serif;
+    color: #ffffff;
+}
+
+#sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #000000;
+}
+
+.sidebarnav {
+    padding: 10px;
+    background-color: #000000;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.navbarbutton {
+    background-color: #fff9f900;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.navbarbutton:hover {
+    background-color: #333333;
+}
+
+.homeicon {
+    width: 30px;
+}
+.rightnav i
+{
+    z-index: 2;
+    margin-left:110px;
+}
+.newreleasebutton {
+    background-color: #333333;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.newreleasebutton:hover {
+    background-color: #444444;
+}
+
+.rightnav {
+    border-bottom: 1px solid #000000;
+    background-color: #000000;
+}
+
+.input-icon {
+    position: relative;
+}
+
+.input-icon .bi-search {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.searchbar {
+    border: none;
+    border-radius: 20px;
+    background-color: #1a1a1a00;
+}
+
+.searchbar::placeholder {
+    color: #000000;
+}
+
+.scrollcontents {
+    overflow-y: auto;
+    height: calc(100vh - 70px);
+}
+
+.searchcontainer {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.result {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.searchimage-container {
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.searchimage {
+    width: 90px;
+    height: 90px;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.searchimage-container:hover .play-button {
+    display: block;
+}
+
+.details-container {
+    flex-grow: 1;
+}
+
+.details-container h6 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.details-container p {
+    margin: 5px 0;
+    color: #d9cfcf;
+    font-size: 14px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #f8f3f3;
+    margin: 20px 0;
+}
+.author:hover{
+  cursor: pointer;
+}
+
+
+
+
+
+

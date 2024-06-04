@@ -1,0 +1,980 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url("../assets/black.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    /* background-color: #000000;
+    background-blend-mode: hard-light; */
+    /* font-family: 'Roboto Mono', monospace; */
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    cursor: pointer;
+}
+
+/* Primary Nav */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #030303;
+    z-index: 1;
+}
+
+.flex-container {
+    cursor: pointer;
+    padding: 0 15px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.flex-container img {
+    display: block;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo p {
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+.primary-nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    font-weight: 600;
+    margin-left: 60px;
+}
+
+.primary-nav ul li {
+    list-style: none;
+    margin: 0 25px;
+    font-size: 20px;
+}
+
+.primary-nav li:hover {
+    color: #fff;
+}
+
+.profile {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+h2 {
+    color: #fff;
+}
+
+p {
+    color: #aaa;
+    font-size: medium;
+}
+
+.fade {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Secondary Nav */
+.secodary-nav-container {
+    width: 85%;
+    margin: auto;
+}
+
+.buttons {
+    margin-top: 110px;
+}
+
+.buttons ul {
+    list-style: none;
+    display: flex;
+    cursor: pointer;
+    padding-left: 0%;
+}
+
+.buttons ul li {
+    font-size: 14px;
+    margin-right: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 12px;
+    border-radius: 10px;
+}
+
+.buttons ul li:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Listen again */
+.main-profile {
+    margin-top: 50px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.main-profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.profile-avi {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+}
+
+.secodary-nav {
+    margin-left: -30px;
+}
+
+.profile-text .name.fade {
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+}
+
+.more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    cursor: pointer;
+}
+
+.more p {
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 15px;
+    border-radius: 30px;
+    margin-top: 15px;
+}
+
+.more p:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+.more i {
+    margin-left: 15px;
+}
+
+.hover:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.header {
+    height: auto;
+}
+
+.fa-regular.fa-less-than {
+    color: rgba(255, 255, 255, 0.1);
+}
+
+/* Quick Picks */
+
+.quick-section .main-profile
+{
+    padding: 0px 99px 0px 70px;
+}
+.main {
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+}
+
+#sidebar {
+    background-color: transparent;
+    width: 70px;
+    min-width: 70px;
+    z-index: 1000;
+    transition: all;
+}
+
+#sidebar.expand .sidebarnav {
+    position: fixed;
+    background-color: black;
+}
+
+#sidebar.expand {
+    width: 240px;
+    min-width: 240px;
+    border-right: .5px solid rgba(255, 255, 255, 0.178);
+}
+
+.toggle-btn {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    padding: 1rem 1.5rem;
+}
+
+.toggle-btn i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.sidebar-logo {
+    margin: auto 0;
+    width: fit-content;
+}
+
+.sidebar-logo a {
+    color: white;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+#sidebar:not(.expand) .sidebar-logo,
+#sidebar:not(.expand) a.sidebar-link span {
+    display: none;
+}
+
+.musiclogo {
+    height: 30px;
+}
+
+.logowithmusic {
+    margin-top: 20px;
+}
+
+ul li {
+    color: white;
+    text-decoration: none;
+}
+
+.rightsection {
+    display: flex;
+    flex-direction: column;
+}
+
+.rightnav {
+    padding-top: 15px;
+    z-index: 5;
+    position: fixed;
+    width: 500px;
+    height: 65px;
+}
+
+.searchbar {
+    margin-left: 100px;
+    width: 500px;
+    background-color: rgb(128, 128, 128);
+    opacity: 40%;
+}
+
+.input-icon {
+    position: relative;
+}
+
+.input-icon>i {
+    position: absolute;
+    left: 110px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #aaa;
+}
+
+.input-icon>input {
+    padding-left: 35px;
+}
+
+.input-icon>input::placeholder {
+    padding-left: 20px;
+    color: #fff;
+}
+
+.searchbardiv {
+    margin-left: 80px;
+}
+
+/* New CSS */
+.navbarbutton:hover {
+    background-color: rgba(128, 128, 128, 0.333);
+}
+
+.home {
+    align-items: center;
+    font-size: 12px;
+    text-align: center;
+}
+
+#sidebar.expand .homeicon {
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+#sidebar.expand .home {
+    font-size: 16px;
+}
+
+#sidebar.expand .sidebar-text {
+    display: inline;
+    margin-left: 10px;
+}
+
+.scrollcontents {
+    height: 150vh;
+}
+
+.sidebarnav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 70px;
+}
+
+#sidebar.expand .sidebarnav {
+    width: 240px;
+}
+
+#sidebar.expand+.main .scrollcontents {
+    margin-left: 0px;
+}
+
+#sidebar.scrolled,
+.rightnav.scrolled {
+    background-color: black;
+    transition: background-color 0.35s ease-in-out;
+}
+
+.songlistsection {
+    width: 100%;
+    margin-top: -100px;
+}
+
+.button-section button {
+    border-radius: 8px;
+    border-color: #aaa;
+    background-color: rgba(207, 203, 203, 0.374);
+}
+
+.button-section {
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-left: 100px;
+}
+
+.slider-container {
+    overflow-x: hidden;
+    white-space: nowrap;
+    margin-left: 70px;
+    margin-right: 100px;
+    transition: overflow 0.3s ease-in-out;
+}
+
+.slider-container:hover {
+    overflow-x: auto;
+
+}
+
+.slider-container::-webkit-scrollbar-track {
+    opacity: 0%;
+
+}
+
+.outer-container {
+    height: 200px;
+}
+
+
+
+.newalbums-singles-slider {
+    list-style: none;
+    padding: 0;
+}
+
+.newalbums-singles-slider li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.slider-container::-webkit-scrollbar {
+    background-color: rgba(6, 6, 6, 0);
+   height: 10px;
+
+}
+
+
+.slider-container::-webkit-scrollbar-thumb {
+    background-color: #2f2d2d;
+     border-radius: 8px;
+    /* Makes the thumb curved */
+    border: 2px solid rgb(6, 6, 6);
+    /* Matches the track background color */
+}
+
+/* Style the parent container for image and details */
+.content-container {
+    width: 150px;
+    overflow: hidden;
+}
+
+
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 5px;
+    display: block;
+}
+
+.image-container i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    visibility: hidden;
+    transition: transform 0.3s ease;
+}
+
+
+.image-container:hover img {
+    filter: brightness(50%);
+    cursor: default;
+}
+
+.image-container:hover   i {
+    visibility: visible;
+    
+}
+.image-container i:hover
+{
+    cursor: pointer;
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+/* Style the details container */
+.details-container {
+    text-align: center;
+}
+
+/* Center the name of the song and artist */
+.song-name,
+.artist-name {
+    display: block;
+    width: 100%;
+}
+
+.song-name {
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.quick-section .main-profile
+{
+    margin-left:70 ;
+}
+/* Style the moods and genres container */
+.moods-genres-container {
+    height: 270px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    white-space: nowrap;
+    margin-left: 5%;
+    margin-right: 7%;
+    transition: overflow 0.3s ease-in-out;
+}
+
+.moods-genres-lists {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    /* Adjusted column width */
+    gap: 15px;
+    list-style: none;
+    margin-bottom: 1px;
+    margin-left: -4%;
+    white-space: nowrap;
+}
+
+.category {
+    display: inline-block;
+    
+}
+
+.card {
+    width: 400px;
+    /* Increased width */
+    height: 50px;
+    padding: 5%;
+    border: none;
+
+    font-weight: bolder;
+    font-size: 90%;
+    background-color: rgba(255, 255, 255, 0);
+        white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+}
+
+.moods-genres-lists img {
+    width: 40px;
+    height: 40px;
+    margin-top: -10px;
+    margin-right: 20px;
+}
+
+.moods-genres-container::-webkit-scrollbar {
+    background-color: rgba(6, 6, 6, 0);
+    height: 10px;
+
+}
+
+
+.moods-genres-container::-webkit-scrollbar-thumb {
+    background-color: #2f2d2d;
+    border-radius: 8px;
+    /* Makes the thumb curved */
+    border: 2px solid rgb(6, 6, 6);
+    /* Matches the track background color */
+}
+.moods-genres-container:hover {
+    overflow-x: auto;
+
+}
+.quick-picks-title {
+    display: flex;
+    position: relative;
+}
+
+.quick-picks-title p {
+    color: #f9f8f8;
+    margin-top: -20px;
+    margin-left: 5px;
+}
+
+.quick-picks-author {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+.quick-picks-title i {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    z-index: 100;
+    color: #fff;
+    transform: translate(-50%, -50%) scale(1);
+    visibility: hidden;
+    transition: transform 0.3s ease;
+}
+
+
+.quick-picks-title:hover img {
+    filter: brightness(50%);
+    cursor: default;
+}
+
+.quick-picks-title:hover i {
+    visibility: visible;
+
+}
+
+.quick-picks-title:hover p {
+
+    color: #fcf9f945
+}
+
+.quick-picks-title i:hover {
+    cursor: pointer;
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+h2 {
+    font-weight: bolder;
+}
+/* Media Queries */
+@media only screen and (max-width: 1200px) {
+    .rightnav {
+        width: 400px;
+    }
+
+
+    .searchbar {
+        width: 400px;
+    }
+
+    .button-section {
+        width: 60%;
+    }
+    .profile-text
+    {
+        margin-left: 20px;
+    }
+    .slider-container
+    {
+        margin-left: 80px;
+    }
+        .quick-section .main-profile {
+            padding: 0px 60px 0px 60px;
+        }
+
+}
+
+@media only screen and (max-width: 992px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .flex-container img {
+        height: 20px;
+        width: 20px;
+    }
+
+    .logo p {
+        font-size: 20px;
+    }
+
+    .primary-nav ul li {
+        margin: 0 15px;
+        font-size: 18px;
+    }
+
+    .buttons ul li {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .main-profile img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .profile-text .name.fade {
+        font-size: 12px;
+    }
+
+    .more p {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .header {
+        height: auto;
+    }
+
+    .slider-container {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+        .quick-section .main-profile {
+            padding: 0px 30px 0px 30px;
+        }
+}
+/* Add this CSS at the end of your existing CSS */
+@media screen and (max-width: 768px) {
+
+    /* Adjust sidebar width and font sizes for smaller screens */
+    #sidebar.expand {
+        width: 350px;
+        min-width: 150px;
+    }
+
+    .secodary-nav .profile-text {
+        margin-left: -10px !important;
+    }
+
+    .profile-text {
+        margin-left: -20px !important;
+    }
+
+    .home {
+        font-size: 14px;
+        /* Adjust font size for collapsed state */
+    }
+
+    #sidebar.expand .home {
+        font-size: 16px;
+        /* Adjust font size for expanded state */
+    }
+
+    .sidebar-logo a {
+        display: none;
+        /* Hide text in sidebar logo for smaller screens */
+    }
+
+    .sidebar-logo {
+        margin: auto;
+    }
+
+    .toggle-btn {
+        padding: 0.8rem 1.2rem;
+        /* Adjust padding for toggle button */
+    }
+
+    .toggle-btn i {
+        font-size: 1.3rem;
+        /* Adjust font size for toggle button icon */
+    }
+
+    .rightnav {
+        width: 100%;
+        /* Occupy full width on smaller screens */
+        padding-left: 10px;
+        /* Adjust left padding */
+        padding-right: 10px;
+        /* Adjust right padding */
+    }
+
+    .searchbar {
+        width: calc(100% - 70px);
+        /* Adjust search bar width */
+        margin-left: 0;
+        /* Remove left margin */
+        margin-right: 0;
+        /* Remove right margin */
+    }
+
+    .buttons {
+        margin-top: 80px;
+        /* Adjust margin top for buttons */
+    }
+
+    .buttons ul li {
+        font-size: 12px;
+        /* Adjust font size for buttons */
+        margin-right: 8px;
+        /* Adjust margin between buttons */
+    }
+
+    .main-profile img {
+        width: 40px;
+        /* Reduce profile image size */
+        height: 40px;
+        /* Reduce profile image size */
+        margin-right: 10px;
+        /* Adjust margin */
+    }
+
+    .profile-text p {
+        font-size: 12px;
+        /* Adjust font size for profile text */
+    }
+
+    .more p {
+        font-size: 12px;
+        /* Adjust font size for 'More' text */
+        padding: 8px 12px;
+        /* Adjust padding */
+    }
+
+    .slider-container {
+        margin-left: 10px;
+        margin-right: 10px;
+        /* Adjust margin for slider container */
+    }
+
+    .image-container i {
+        margin-left: 40px;
+        /* Adjust margin for icon */
+        margin-top: -40px;
+        /* Adjust margin for icon */
+    }
+
+    .quick-section {
+        padding-top: 10px;
+        /* Adjust padding top */
+    }
+
+    .moods-genres-container {
+        margin-left: 0;
+        /* Remove left margin */
+        margin-right: 0;
+        /* Remove right margin */
+    }
+
+    .logowithmusic {
+        display: none;
+    }
+
+    .input-icon i {
+        left: 10px;
+    }
+}
+/* ==================================TOP RIGHT ICONS================================ */
+.toprighticons {
+    display: flex;
+    width: fit-content;
+    position: fixed;
+    top: 15px;
+    right: 10%;
+    z-index: 2000;
+}
+
+.searchicon {
+    display: none;
+    padding-right: 20px;
+    margin-top: 4px;
+    /* padding-top: 30px; */
+}
+
+.casticon {
+    margin-top: 5px;
+    /* margin-left: 400px; */
+}
+
+/* =======================================MODAL==================================== */
+#modaal {
+    display: none;
+    position: absolute;
+    right: 125px;
+    top: 55px;
+}
+#modaalsign
+{
+        display: none;
+            position: absolute;
+            left: 65%;
+            top: 55px;
+}
+
+#sidebar.expand~.main #modaal {
+    display: none;
+    position: absolute;
+    right: 365px;
+    top: 55px;
+}
+
+#modaalonshowall {
+    display: none;
+    position: absolute;
+    right: 200px;
+    top: 55px;
+}
+
+#sidebar.expand~.main #modaalonshowall .modal-body {
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(128, 128, 128, 0.395);
+}
+
+.modalbox,
+.modal-dialog {
+    border-radius: 15px;
+    background-color: rgb(51, 51, 51);
+}
+
+.your-channel-button {
+    width: 100%;
+    border-radius: 0;
+}
+
+.your-channel-button:hover {
+    background-color: rgba(128, 128, 128, 0.543);
+}
+
+.proilepic {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 50%;
+    height: 50px;
+}
+/* ==================================TOP RIGHT ICONS================================ */
+.toprighticons {
+  display: flex;
+  width: fit-content;
+  position: fixed;
+  top: 15px;
+  right: 10%;
+  z-index: 2000;
+}
+.searchicon {
+  display: none;
+  padding-right: 20px;
+  margin-top: 4px;
+  /* padding-top: 30px; */
+}
+
+.casticon {
+  margin-top: 5px;
+  /* margin-left: 400px; */
+}
+
+/* =======================================MODAL==================================== */
+#modaal {
+  display: none;
+  position: absolute;
+  right: 125px;
+  top: 55px;
+}
+
+#sidebar.expand ~ .main #modaal {
+  display: none;
+  position: absolute;
+  right: 365px;
+  top: 55px;
+}
+
+#modaalonshowall {
+  display: none;
+  position: absolute;
+  right: 200px;
+  top: 55px;
+}
+
+#sidebar.expand ~ .main #modaalonshowall .modal-body {
+  padding-bottom: 20px;
+  border-top: 1px solid rgba(128, 128, 128, 0.395);
+}
+
+.modalbox,
+.modal-dialog {
+  border-radius: 15px;
+  background-color: rgb(51, 51, 51);
+}
+
+.your-channel-button {
+  width: 100%;
+  border-radius: 0;
+}
+
+.your-channel-button:hover {
+  background-color: rgba(128, 128, 128, 0.543);
+}
+.proilepic {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 50%;
+  height: 50px;
+}
